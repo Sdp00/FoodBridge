@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+🥘 FOOD BRIDGE - Backend Server
+This is the backend server for the Food Bridge application, where donors can donate food and receivers can view and show interest in available donations.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 Technologies Used
+Node.js
+Express.js
+MongoDB + Mongoose
+dotenv (for environment variables)
+CORS
 
-## Available Scripts
+🛠 Project Setup
+1. Clone the repository
+git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+cd YOUR-REPO-NAME
 
-In the project directory, you can run:
+2. Install dependencies
+npm install
 
-### `npm start`
+3. Create a .env file inside the root directory and add:
+MONGO_URI=your-mongodb-connection-string
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. Start the server
+npm run dev
+or
+nodemon index.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+📂 Project Structure
 
-### `npm test`
+foodbridge-server/
+├── models/
+│   ├── fooddonation.js
+│   └── user.js
+├── routes/
+│   ├── foodRoutes.js
+│   └── userRoutes.js
+├── .env
+├── .gitignore
+├── index.js
+├── package.json
+└── README.md
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📦 API Endpoints
+➡️ Authentication
+Register User
+  POST /api/users/register
 
-### `npm run build`
+Login User
+  POST /api/users/login
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+➡️ Food Donations
+Create Donation
+  POST /api/food/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Get All Donations
+  GET /api/food/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Express Interest in Donation
+  POST /api/food/:id/interested
 
-### `npm run eject`
+View Interested Users
+  GET /api/food/:id/interested
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🙏 Acknowledgements
+Special thanks to all the open-source libraries and resources used in this project!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+✨ Future Plans
+Add authentication using JWT
+Build frontend (React.js)
+Add real-time notifications
+Deployment to cloud (Render/Heroku/Netlify)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy Coding

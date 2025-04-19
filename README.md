@@ -17,7 +17,7 @@ cd FoodBridge
 npm install
 
 3. Create a .env file inside the root directory and add:
-MONGO_URI=your-mongodb-connection-string
+MONGO_URI=mongodb-connection-string
 
 4. Start the server
 npm run dev

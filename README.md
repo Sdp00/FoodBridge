@@ -10,8 +10,8 @@ CORS
 
 🛠 Project Setup
 1. Clone the repository
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
-cd YOUR-REPO-NAME
+git clone https://github.com/Sdp00/FoodBridge.git
+cd FoodBridge
 
 2. Install dependencies
 npm install
